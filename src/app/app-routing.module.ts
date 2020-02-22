@@ -4,7 +4,7 @@ import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "feature-list",
+    redirectTo: "pesquisa",
     pathMatch: "full"
   },
   {
@@ -18,9 +18,9 @@ const routes: Routes = [
       import("./features/login/login.module").then(m => m.LoginModule)
   },
   {
-    path: "about",
+    path: "cadastro-usuario",
     loadChildren: () =>
-      import("./features/about/about.module").then(m => m.AboutModule)
+      import("./features/cadastro-usuario/cadastro-usuario.module").then(m => m.CadastroUsuarioModule)
   },
   {
     path: "feature-list",
@@ -41,7 +41,7 @@ const routes: Routes = [
   },
   {
     path: "**",
-    redirectTo: "about"
+    redirectTo: "pesquisa"
   }
 ];
 

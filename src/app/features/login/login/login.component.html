@@ -2,37 +2,46 @@
     <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="row justify-content-center">
             <div class="col-md-5">
-                <mat-card>
+                <div class="login-content">
+                    <div class="login-form">
 
-                    <div class="row">
-                        <mat-form-field class="col" [ngClass]="routeAnimationsElements">
-                            <input matInput 
-                                placeholder="{{'app.login.username' | translate}}" 
-                                formControlName="username" type="text" />
-                            <mat-error *ngIf="form.get('username').hasError('required')">
-                                {{ "app.login.username.validation" | translate }}
-                            </mat-error>
-                        </mat-form-field>
-                    </div>
-                    <div class="row">
-                        <mat-form-field class="col" [ngClass]="routeAnimationsElements">
-                            <input matInput type="password" 
-                                placeholder="{{'app.login.password' | translate}}" 
-                                formControlName="password" />
-                            <mat-error *ngIf="form.get('password').invalid">
-                                {{ "app.login.password.validation" | translate }}
-                            </mat-error>
-                        </mat-form-field>
-                    </div>
-                    <div class="row buttons d-flex justify-content-between pad">
+                        <div class="row">
+                            <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+                                <input matInput 
+                                    placeholder="{{'app.login.username' | translate}}" 
+                                    formControlName="username" type="text" />
+                                <mat-error *ngIf="form.get('username').hasError('required')">
+                                    {{ "app.login.username.validation" | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="row">
+                            <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+                                <input matInput type="password" 
+                                    placeholder="{{'app.login.password' | translate}}" 
+                                    formControlName="password" />
+                                <mat-error *ngIf="form.get('password').invalid">
+                                    {{ "app.login.password.validation" | translate }}
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="row buttons d-flex justify-content-between pad">
 
-                            <button type="button" class="btn-login" mat-raised-button color="accent" 
-                                [disabled]="form.get('autosave').value"
-                                [ngClass]="routeAnimationsElements" (click)="save()">
-                                {{ "app.login.enter" | translate }}
-                            </button>
+                                <button type="button" class="btn-login" mat-raised-button color="accent" 
+                                    [ngClass]="routeAnimationsElements" (click)="login()">
+                                    {{ "app.login.enter" | translate }}
+                                </button>
+                        </div>
                     </div>
-                </mat-card>
+                    <div class="create-account">
+                        <strong>Não tenho cadastro</strong>
+                        <button class="btn-login" mat-raised-button color="primary" 
+                            [routerLink]="['cadastro-usuario']"
+                            [ngClass]="routeAnimationsElements">
+                            {{ "app.login.criar.conta" | translate }}
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </form>

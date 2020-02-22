@@ -1,7 +1,7 @@
 <div class="container" rtl>
     <form [formGroup]="form" (ngSubmit)="submit()">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-5">
                 <mat-card>
 
                     <div class="row">
@@ -23,6 +23,14 @@
                                 {{ "app.login.password.validation" | translate }}
                             </mat-error>
                         </mat-form-field>
+                    </div>
+                    <div class="row buttons d-flex justify-content-between pad">
+
+                            <button type="button" class="btn-login" mat-raised-button color="accent" 
+                                [disabled]="form.get('autosave').value"
+                                [ngClass]="routeAnimationsElements" (click)="save()">
+                                {{ "app.login.enter" | translate }}
+                            </button>
                     </div>
                 </mat-card>
             </div>

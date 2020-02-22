@@ -1,13 +1,13 @@
-.form-pesquisa {
-  mat-form-field {
-    width: 80%;
-  }
-}
-
 @import "../../../../styles-variables";
 
 .container {
   margin-top: 20px;
+}
+
+.form-pesquisa {
+  mat-form-field {
+    width: 80%;
+  }
 }
 
 .main-heading {

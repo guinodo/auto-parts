@@ -65,5 +65,10 @@
 
   "app.menu.login": "Login",
   "app.menu.pesquisa": "Pesquisa",
-  "app.title": "Auto Parts"
+  "app.title": "Auto Parts",
+
+  "app.login.username": "Nome de usuário ou e-mail",
+  "app.login.username.validation": "Informe um nome de usuário ou e-mail",
+  "app.login.password": "Senha",
+  "app.login.password.validation": "Informe sua senha"
 }

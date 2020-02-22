@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 
 const routes: Routes = [
   {

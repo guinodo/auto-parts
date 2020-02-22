@@ -36,7 +36,7 @@
                     <div class="create-account">
                         <strong>Não tenho cadastro</strong>
                         <button class="btn-login" mat-raised-button color="primary" 
-                            [routerLink]="['cadastro-usuario']"
+                            (click)="cadastroUsuario()"
                             [ngClass]="routeAnimationsElements">
                             {{ "app.login.criar.conta" | translate }}
                         </button>

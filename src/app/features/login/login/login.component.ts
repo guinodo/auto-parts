@@ -2,6 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
 import { FormBuilder, Validators } from '@angular/forms';
 import { ROUTE_ANIMATIONS_ELEMENTS, NotificationService } from 'app/core/core.module';
 import { TranslateService } from '@ngx-translate/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: "anms-login",
@@ -22,7 +23,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private notificationService: NotificationService,
-    private translate: TranslateService  
+    private translate: TranslateService,
+    private router: Router,
+    private activeRoute: ActivatedRoute
   ) {}
 
   ngOnInit(): void {}
@@ -43,5 +46,8 @@ export class LoginComponent implements OnInit {
     console.log('login');
   }
   
+  cadastroUsuario(){
+    this.router.navigate(['../cadastro-usuario'], { relativeTo: this.activeRoute.parent });
+  }
 
 }

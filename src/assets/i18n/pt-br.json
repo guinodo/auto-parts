@@ -72,5 +72,22 @@
   "app.login.password": "Senha",
   "app.login.password.validation": "Informe sua senha",
   "app.login.enter": "Entrar",
-  "app.login.criar.conta": "Criar Conta"
+  "app.login.criar.conta": "Criar Conta",
+
+  "app.cadastro.usuario.titulo": "Cadastro",
+
+  "app.usuario.nome": "Nome",
+  "app.usuario.email": "E-mail",
+  "app.usuario.usuario": "Nome de usuário",
+  "app.usuario.dataNascimento": "Data de Nascimento",
+  "app.usuario.senha": "Senha",
+  "app.usuario.confirmarSenha": "Confirmar Senha",
+  "app.usuario.nome.invalido": "Informe seu nome",
+  "app.usuario.cadastro.email.nao.informado": "Informe seu e-mail",
+  "app.usuario.cadastro.usuario.invalido": "Informe um nome de usuário",
+  "app.usuario.dataNascimento.invalida": "Informe a data de nascimento",
+  "app.usuario.cadastro.senha.nao.informacao": "Informe um senha",
+  "app.usuario.cadastro.confirmarSenha.nao.informacao": "Confirme seu senha"
+
+
 }

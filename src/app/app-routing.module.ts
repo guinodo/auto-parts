@@ -23,13 +23,6 @@ const routes: Routes = [
       import("./features/cadastro-usuario/cadastro-usuario.module").then(m => m.CadastroUsuarioModule)
   },
   {
-    path: "feature-list",
-    loadChildren: () =>
-      import("./features/feature-list/feature-list.module").then(
-        m => m.FeatureListModule
-      )
-  },
-  {
     path: "settings",
     loadChildren: () =>
       import("./features/settings/settings.module").then(m => m.SettingsModule)

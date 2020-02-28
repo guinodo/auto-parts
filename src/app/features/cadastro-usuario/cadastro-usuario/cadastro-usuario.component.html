@@ -1,1 +1,125 @@
-<p>cadastro-usuario works!</p>
+<div class="container" rtl>
+    <div class="row">
+        <div class="col">
+        <h1 class="main-heading">{{ "app.cadastro.usuario.titulo" | translate }}</h1>
+        </div>
+    </div>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <mat-card>
+                    <div class="row">
+                        <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+                            <input
+                                matInput
+                                placeholder="{{'app.usuario.nome' | translate}}"
+                                formControlName="nome"
+                            />
+                            <mat-error *ngIf="form.get('nome').invalid">
+                                {{ "app.usuario.nome.invalido" | translate }}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+                            <input
+                                matInput
+                                type="email"
+                                placeholder="{{'app.usuario.email' | translate}}"
+                                formControlName="email"
+                            />
+                            <mat-error *ngIf="form.get('email').hasError('required')">
+                                {{ "app.usuario.cadastro.email.nao.informado" | translate }}
+                            </mat-error>
+                            <mat-error *ngIf="form.get('email').hasError('email')">
+                                {{ "app.usuario.cadastro.email.invalido" | translate }}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+                            <input
+                                matInput
+                                placeholder="{{'app.usuario.usuario' | translate}}"
+                                formControlName="usuario"
+                                type="text"
+                            />
+                            <mat-error *ngIf="form.get('email').hasError('required')">
+                                {{ "app.usuario.cadastro.usuario.invalido" | translate }}
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+                            <input
+                                matInput
+                                formControlName="dataNascimento"
+                                [matDatepicker]="picker"
+                                placeholder="{{'app.usuario.dataNascimento' | translate}}"
+                            />
+                            <mat-datepicker-toggle
+                                matSuffix
+                                [for]="picker"
+                            ></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                            <mat-error *ngIf="form.get('dataNascimento').hasError('required')">
+                                {{ "app.usuario.dataNascimento.invalida" | translate }}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row">
+                        <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+                            <input
+                                matInput
+                                placeholder="{{'app.usuario.senha' | translate}}"
+                                formControlName="senha"
+                                type="password"
+                                maxlength="8"
+                            />
+                            <mat-error *ngIf="form.get('senha').hasError('required')">
+                                {{ "app.usuario.cadastro.senha.nao.informacao" | translate }}
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field class="col" [ngClass]="routeAnimationsElements">
+                            <input
+                                matInput
+                                placeholder="{{'app.usuario.confirmarSenha' | translate}}"
+                                formControlName="confirmacaoSenha"
+                                type="password"
+                                maxlength="8"
+                            />
+                            <mat-error *ngIf="form.get('confirmacaoSenha').hasError('required')">
+                                {{ "app.usuario.cadastro.confirmarSenha.nao.informacao" | translate }}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="row buttons d-flex justify-content-between pad">
+                        <button
+                            mat-raised-button
+                            color="primary"
+                            [ngClass]="routeAnimationsElements"
+                        >
+                            {{ "anms.examples.form.send" | translate }}
+                        </button>
+                        <button
+                            type="button"
+                            mat-raised-button
+                            color="accent"
+                            [disabled]="form.get('autosave').value"
+                            [ngClass]="routeAnimationsElements"
+                            (click)="save()"
+                        >
+                            {{ "anms.examples.form.save" | translate }}
+                        </button>
+                        <button
+                            type="reset"
+                            mat-raised-button
+                            (click)="reset()"
+                            [ngClass]="routeAnimationsElements"
+                        >
+                            {{ "anms.examples.form.reset" | translate }}
+                        </button>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
+    </form>
+</div>

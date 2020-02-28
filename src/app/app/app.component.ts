@@ -34,8 +34,6 @@ export class AppComponent implements OnInit {
   logo = require("../../assets/logo.png");
   navigation = [
     { link: "pesquisa", label: "app.menu.pesquisa" },
-    { link: "about", label: "anms.menu.about" },
-    { link: "feature-list", label: "anms.menu.features" },
     { link: "examples", label: "anms.menu.examples" }
   ];
   navigationSideMenu = [

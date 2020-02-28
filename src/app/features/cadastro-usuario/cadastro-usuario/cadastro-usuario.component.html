@@ -97,17 +97,7 @@
                             color="primary"
                             [ngClass]="routeAnimationsElements"
                         >
-                            {{ "anms.examples.form.send" | translate }}
-                        </button>
-                        <button
-                            type="button"
-                            mat-raised-button
-                            color="accent"
-                            [disabled]="form.get('autosave').value"
-                            [ngClass]="routeAnimationsElements"
-                            (click)="save()"
-                        >
-                            {{ "anms.examples.form.save" | translate }}
+                            {{ "app.cadastrar" | translate }}
                         </button>
                         <button
                             type="reset"
@@ -115,7 +105,7 @@
                             (click)="reset()"
                             [ngClass]="routeAnimationsElements"
                         >
-                            {{ "anms.examples.form.reset" | translate }}
+                            {{ "app.cancelar" | translate }}
                         </button>
                     </div>
                 </mat-card>

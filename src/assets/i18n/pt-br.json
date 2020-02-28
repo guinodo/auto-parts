@@ -66,6 +66,8 @@
   "app.menu.login": "Login",
   "app.menu.pesquisa": "Pesquisa",
   "app.title": "Auto Parts",
+  "app.cadastrar": "Cadastrar",
+  "app.cancelar": "Cancelar",
 
   "app.login.username": "Usuário ou e-mail",
   "app.login.username.validation": "Informe um usuário ou e-mail",
@@ -84,6 +86,7 @@
   "app.usuario.confirmarSenha": "Confirmar Senha",
   "app.usuario.nome.invalido": "Informe seu nome",
   "app.usuario.cadastro.email.nao.informado": "Informe seu e-mail",
+  "app.usuario.cadastro.email.invalido": "E-mail invalido",
   "app.usuario.cadastro.usuario.invalido": "Informe um nome de usuário",
   "app.usuario.dataNascimento.invalida": "Informe a data de nascimento",
   "app.usuario.cadastro.senha.nao.informacao": "Informe um senha",
